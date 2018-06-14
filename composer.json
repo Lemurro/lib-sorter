@@ -1,0 +1,22 @@
+{
+  "name": "lemurro/lib-sorter",
+  "description": "PHP-библиотека LibSorter - сортировка ассоциативного массива по определённому ключу",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dmitrii Shcherbakov",
+      "email": "info@bestion.ru",
+      "homepage": "http://bestion.ru",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Lemurro\\Lib\\Sorter\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.0.0"
+  }
+}
