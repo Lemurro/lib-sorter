@@ -8,7 +8,7 @@ composer require lemurro/lib-sorter
 ```
 
 ## Использование
-```
+```php
 $sorter = new \Lemurro\Lib\Sorter\Sorter();
 
 $array = [
