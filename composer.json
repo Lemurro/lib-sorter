@@ -1,6 +1,6 @@
 {
   "name": "lemurro/lib-sorter",
-  "description": "PHP-библиотека LibSorter - сортировка ассоциативного массива по определённому ключу",
+  "description": "PHP-библиотека Sorter - сортировка ассоциативного массива по определённому ключу",
   "type": "library",
   "license": "MIT",
   "authors": [
