@@ -2,7 +2,7 @@
 /**
  * Инициализация
  *
- * @version 14.06.2018
+ * @version 21.08.2018
  * @author  Дмитрий Щербаков <atomcms@ya.ru>
  */
 
@@ -38,7 +38,7 @@ class Sorter
      *
      * @return boolean
      *
-     * @version 14.06.2018
+     * @version 21.08.2018
      * @author  Дмитрий Щербаков <atomcms@ya.ru>
      */
     public function run(&$array, $key_name, $order_type)
@@ -46,7 +46,7 @@ class Sorter
         $this->key_name = $key_name;
         $this->order_type = mb_strtolower($order_type, 'UTF-8');
 
-        return usort($array, [$this, 'sort']);
+        return uasort($array, [$this, 'sort']);
     }
 
     /**
