@@ -2,7 +2,7 @@
 /**
  * Инициализация
  *
- * @version 21.08.2018
+ * @version 08.05.2019
  * @author  Дмитрий Щербаков <atomcms@ya.ru>
  */
 
@@ -32,21 +32,26 @@ class Sorter
     /**
      * Выполним сортировку
      *
-     * @param array  &$array     Массив
-     * @param string $key_name   Название ключа
-     * @param string $order_type Тип сортировки ('asc'|'desc')
+     * @param array  &$array      Массив
+     * @param string  $key_name   Название ключа
+     * @param string  $order_type Тип сортировки ('asc'|'desc')
+     * @param boolean $save_keys  Сохранить ключи (true|false)
      *
      * @return boolean
      *
-     * @version 21.08.2018
+     * @version 08.05.2019
      * @author  Дмитрий Щербаков <atomcms@ya.ru>
      */
-    public function run(&$array, $key_name, $order_type)
+    public function run(&$array, $key_name, $order_type, $save_keys = true)
     {
         $this->key_name = $key_name;
         $this->order_type = mb_strtolower($order_type, 'UTF-8');
 
-        return uasort($array, [$this, 'sort']);
+        if ($save_keys) {
+            return uasort($array, [$this, 'sort']);
+        } else {
+            return usort($array, [$this, 'sort']);
+        }
     }
 
     /**
